@@ -162,7 +162,7 @@
 
     .line 21665
     .local v1, "blurImgWidth":I
-    const v2, 0x3e99999a    # 0.3f
+    const v2, 0x3ecccccd    # 0.4f
 
     .line 21667
     .local v2, "contrast":F
