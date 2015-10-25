@@ -11658,7 +11658,6 @@
 
     goto :goto_b
 
-    .line 1516
     .end local v27    # "e":Landroid/os/RemoteException;
     :cond_1a
     new-instance v7, Lcom/android/server/am/ActivityRecord;
@@ -16203,6 +16202,13 @@
 .end method
 
 .method validateTopActivitiesLocked()V
+    .locals 0
+
+    .prologue
+    return-void
+.end method
+
+.method mzNotifyActivityDrawnForKeyguard()V
     .locals 0
 
     .prologue
