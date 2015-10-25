@@ -1,4 +1,4 @@
-.class final Landroid/app/ContextImpl$65;
+.class final Landroid/app/ContextImpl$66;
 .super Landroid/app/ContextImpl$ServiceFetcher;
 .source "ContextImpl.java"
 
@@ -19,7 +19,7 @@
     .locals 0
 
     .prologue
-    .line 784
+    .line 792
     invoke-direct {p0}, Landroid/app/ContextImpl$ServiceFetcher;-><init>()V
 
     return-void
@@ -32,28 +32,30 @@
     .param p1, "ctx"    # Landroid/app/ContextImpl;
 
     .prologue
-    .line 786
-    const-string/jumbo v2, "themes"
+    .line 794
+    const-string/jumbo v3, "torch"
 
-    invoke-static {v2}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
+    invoke-static {v3}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
     move-result-object v0
 
-    .line 787
+    .line 795
     .local v0, "b":Landroid/os/IBinder;
-    invoke-static {v0}, Landroid/content/res/IThemeService$Stub;->asInterface(Landroid/os/IBinder;)Landroid/content/res/IThemeService;
+    invoke-static {v0}, Landroid/hardware/ITorchService$Stub;->asInterface(Landroid/os/IBinder;)Landroid/hardware/ITorchService;
+
+    move-result-object v2
+
+    .line 796
+    .local v2, "service":Landroid/hardware/ITorchService;
+    invoke-virtual {p1}, Landroid/app/ContextImpl;->getOuterContext()Landroid/content/Context;
 
     move-result-object v1
 
-    .line 788
-    .local v1, "service":Landroid/content/res/IThemeService;
-    new-instance v2, Landroid/content/res/ThemeManager;
+    .line 797
+    .local v1, "outerContext":Landroid/content/Context;
+    new-instance v3, Landroid/hardware/TorchManager;
 
-    invoke-virtual {p1}, Landroid/app/ContextImpl;->getOuterContext()Landroid/content/Context;
+    invoke-direct {v3, v1, v2}, Landroid/hardware/TorchManager;-><init>(Landroid/content/Context;Landroid/hardware/ITorchService;)V
 
-    move-result-object v3
-
-    invoke-direct {v2, v3, v1}, Landroid/content/res/ThemeManager;-><init>(Landroid/content/Context;Landroid/content/res/IThemeService;)V
-
-    return-object v2
+    return-object v3
 .end method

@@ -1811,9 +1811,9 @@
 
     aput-object v2, v0, v1
 
-    const/16 v1, 0x2c
+    add-int/lit8 v1, v1, 0x1
 
-    const-string v2, "privacy_guard_notification"
+    const-string v2, "meizu_keyguard_lock"
 
     aput-object v2, v0, v1
 

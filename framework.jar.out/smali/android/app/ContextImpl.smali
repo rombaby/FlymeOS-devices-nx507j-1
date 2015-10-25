@@ -759,7 +759,7 @@
     invoke-static {v0, v1}, Landroid/app/ContextImpl;->registerService(Ljava/lang/String;Landroid/app/ContextImpl$ServiceFetcher;)V
 
     .line 778
-    const-string/jumbo v0, "themes"
+    const-string/jumbo v0, "profile"
 
     new-instance v1, Landroid/app/ContextImpl$64;
 
@@ -768,13 +768,32 @@
     invoke-static {v0, v1}, Landroid/app/ContextImpl;->registerService(Ljava/lang/String;Landroid/app/ContextImpl$ServiceFetcher;)V
 
     .line 786
-    const-string/jumbo v0, "torch"
+    const-string/jumbo v0, "themes"
 
     new-instance v1, Landroid/app/ContextImpl$65;
 
     invoke-direct {v1}, Landroid/app/ContextImpl$65;-><init>()V
 
     invoke-static {v0, v1}, Landroid/app/ContextImpl;->registerService(Ljava/lang/String;Landroid/app/ContextImpl$ServiceFetcher;)V
+
+    const-string/jumbo v0, "torch"
+
+    new-instance v1, Landroid/app/ContextImpl$66;
+
+    invoke-direct {v1}, Landroid/app/ContextImpl$66;-><init>()V
+
+    invoke-static {v0, v1}, Landroid/app/ContextImpl;->registerService(Ljava/lang/String;Landroid/app/ContextImpl$ServiceFetcher;)V
+
+    .line 800
+    const-string v0, "cmhw"
+
+    new-instance v1, Landroid/app/ContextImpl$67;
+
+    invoke-direct {v1}, Landroid/app/ContextImpl$67;-><init>()V
+
+    invoke-static {v0, v1}, Landroid/app/ContextImpl;->registerService(Ljava/lang/String;Landroid/app/ContextImpl$ServiceFetcher;)V
+
+    invoke-static {}, Landroid/app/ContextImpl;->registeFlymeManager()V
 
     return-void
 .end method

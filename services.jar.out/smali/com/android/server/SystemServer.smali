@@ -3080,6 +3080,8 @@
 
     if-nez v58, :cond_1e
 
+    goto :goto_flyme_0
+
     :try_start_39
     const-string v4, "SystemServer"
 
@@ -3115,6 +3117,7 @@
     .restart local v37    # "atlas":Lcom/android/server/AssetAtlasService;
     :cond_1e
     :goto_27
+    :goto_flyme_0
     invoke-virtual {v3}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v4
@@ -3268,11 +3271,13 @@
 
     invoke-static {v4, v5}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    new-instance v112, Lcom/android/server/ThemeService;
+    #new-instance v112, Lcom/android/server/ThemeService;
 
-    move-object/from16 v0, v112
+    #move-object/from16 v0, v112
 
-    invoke-direct {v0, v3}, Lcom/android/server/ThemeService;-><init>(Landroid/content/Context;)V
+    #invoke-direct {v0, v3}, Lcom/android/server/ThemeService;-><init>(Landroid/content/Context;)V
+
+    const/16 v112, 0x0
     :try_end_3d
     .catch Ljava/lang/Throwable; {:try_start_3d .. :try_end_3d} :catch_26
 
@@ -3284,7 +3289,7 @@
 
     move-object/from16 v0, v112
 
-    invoke-static {v4, v0}, Landroid/os/ServiceManager;->addService(Ljava/lang/String;Landroid/os/IBinder;)V
+    #invoke-static {v4, v0}, Landroid/os/ServiceManager;->addService(Ljava/lang/String;Landroid/os/IBinder;)V
     :try_end_3e
     .catch Ljava/lang/Throwable; {:try_start_3e .. :try_end_3e} :catch_39
 
@@ -3739,6 +3744,14 @@
 
     .line 1117
     .restart local v92    # "mmsService":Lcom/android/server/MmsServiceBroker;
+    move-object/from16 v0, p0
+
+    move-object/from16 v4, v125
+
+    move-object/from16 v5, v119
+
+    invoke-static {v0, v4, v5}, Lcom/android/server/SystemServer$FlymeInjector;->startFlymeServices(Lcom/android/server/SystemServer;Lcom/android/server/wm/WindowManagerService;Lcom/android/server/wallpaper/WallpaperManagerService;)V
+
     move-object/from16 v36, v71
 
     .local v36, "arr$":[Ljava/lang/String;

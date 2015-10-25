@@ -597,6 +597,10 @@
 /system/bin/loc_api_app                         u:object_r:location_exec:s0
 /system/bin/test_loc_api_client                 u:object_r:location_exec:s0
 
+# Hardware tunables
+/sys/devices/virtual/graphics/fb0/rgb          -- u:object_r:sysfs_hardware:s0
+/sys/devices/virtual/timed_output/vibrator/amp -- u:object_r:sysfs_hardware:s0
+
 #Context for mediaserver
 /data/display-tests/media(/.*)?                 u:object_r:display_test_media_file:s0
 #line 1 "vendor/cm/sepolicy/file_contexts"
