@@ -40,7 +40,7 @@ vendor_modify_images := boot
 # The default value is app or pri-app which not need to configure.
 # You can configure the directory name which relative to the vendor/system directory.
 #-----------------------------------------------------------------------------
-#vendor_remove_dirs := vendor/operator/app
+vendor_remove_dirs := preinstall
 
 ##############################################################################
 # The value decides the file which you want to remove in the vendor directory for the ota package.
@@ -141,7 +141,7 @@ override_property += \
 # You should configure the property according to your device and your ID with replace the "Nexus-5_Unofficial".
 override_property += \
     ro.flyme.romer=Po_Chan \
-    ro.product.model_romer=nx507j_Po_Chn
+    ro.product.model_romer=nx507j_Po_Chan
 
 ##############################################################################
 # The value decides which property you will remove from the build.prop.
