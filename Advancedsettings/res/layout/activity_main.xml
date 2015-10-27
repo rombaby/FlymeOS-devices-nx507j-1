@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:theme="@style/AppTheme.AppBarOverlay" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <android.support.v7.widget.Toolbar android:id="@id/toolbar" android:background="?colorPrimary" android:layout_width="fill_parent" android:layout_height="?actionBarSize" app:popupTheme="@style/AppTheme.PopupOverlay" />
+        <TextView android:textSize="23.0sp" android:textColor="#ffffffff" android:gravity="center" android:layout_width="fill_parent" android:layout_height="?actionBarSize" android:text="Build编辑" />
+    </RelativeLayout>
+    <TextView android:textSize="20.0sp" android:gravity="center_horizontal" android:id="@id/tv_show" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="10.0dip" android:text="虚拟键已开启" />
+    <RadioGroup android:gravity="center_horizontal" android:orientation="horizontal" android:id="@id/rg" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="30.0dip">
+        <RadioButton android:id="@id/rb_open" android:layout_width="0.0dip" android:layout_height="wrap_content" android:checked="true" android:text="开启" android:layout_weight="1.0" />
+        <RadioButton android:id="@id/rb_clean" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="关闭" android:layout_weight="1.0" />
+    </RadioGroup>
+</LinearLayout>

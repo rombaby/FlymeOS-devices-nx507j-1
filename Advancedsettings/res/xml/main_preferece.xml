@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="系统设置">
+        <SwitchPreference android:title="虚拟按键" android:key="Virtual_key" android:summaryOn="虚拟按键已开启" android:summaryOff="虚拟按键已关闭" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="电源管理">
+        <Preference android:title="关机" android:key="pf_reboot_P" android:summary="关闭手机电源" />
+        <Preference android:title="正常重启" android:key="pf_reboot" android:summary="正常重启手机" />
+        <Preference android:title="快速重启" android:key="pf_killall" android:summary="快速重启手机" />
+        <Preference android:title="Recovery模式" android:key="pf_recovery" android:summary="进入恢复模式，进行刷机/备份等操作" />
+        <Preference android:title="Bootloader模式" android:key="pf_bootloader" android:summary="进入引导模式" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="关于作者">
+        <Preference android:title="ROM作者：Yaphet.Chan" android:key="about" android:summary="个人微博:http://weibo.com/1683048537" />
+    </PreferenceCategory>
+</PreferenceScreen>

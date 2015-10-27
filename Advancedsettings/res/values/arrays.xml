@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="reboot_entries">
+        <item>关机</item>
+        <item>正常重启</item>
+        <item>快速重启</item>
+        <item>重启至Recovery</item>
+        <item>重启至Bootloader</item>
+    </string-array>
+    <string-array name="reboot_entryValues">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+    </string-array>
+</resources>
